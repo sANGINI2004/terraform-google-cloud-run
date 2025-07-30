@@ -26,7 +26,7 @@ REGISTRY_URL := gcr.io/cloud-foundation-cicd
 .PHONY: docker_test_lint
 docker_test_lint:
 	docker run --rm -it \
-		-e ENABLE_BPMETADATA \
+		-e ENABLE_BPMETADATA=1 \
 		-e ENABLE_PARALLEL=1 \
         -e DISABLE_TFLINT=1 \
 		-v $(CURDIR):/workspace \
